@@ -1,44 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deviya A/P Savunthi Pandiyan | e-Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
-    
+    <title>Premium E-Portfolio | Deviya A/P Savunthi Pandiyan</title>
     <style>
         :root {
-
-            --off-white: #FAF9F7;
-            --pure-white: #FFFFFF;
-            --slate-100: #F1F5F9;
-            --slate-200: #E2E8F0;
-            --slate-700: #334155;
-            --slate-800: #1E293B;
-            --slate-900: #0F172A;
-            
-            --emerald-100: #DCFCE7;
-            --emerald-600: #16A34A;
-            --emerald-800: #166534;
-            --emerald-950: #052E16;
-            
-            --primary: var(--emerald-950);
-            --primary-bg: var(--off-white);
-            --card-bg: var(--pure-white);
-            --text-main: var(--slate-800);
-            --text-muted: var(--slate-700);
-            
-            --max-width: 1140px;
-            --gap-large: 4rem;
-            --gap-med: 2rem;
-            --gap-small: 1rem;
-            
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg-main: #0B0F19;
+            --bg-card: #111827;
+            --bg-nav: rgba(17, 24, 39, 0.85);
+            --primary: #10B981;
+            --primary-glow: rgba(16, 185, 129, 0.2);
+            --primary-dark: #059669;
+            --accent: #34D399;
+            --text-main: #F3F4F6;
+            --text-muted: #9CA3AF;
+            --border-color: rgba(255, 255, 255, 0.05);
+            --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * {
@@ -49,515 +28,623 @@
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
-            scroll-padding-top: 80px;
         }
 
         body {
-            font-family: 'IBM Plex Sans', sans-serif;
-            background-color: var(--primary-bg);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
             color: var(--text-main);
-            line-height: 1.6;
-            letter-spacing: -0.01em;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
+        /* Hero Header Component */
+        header {
+            position: relative;
+            background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%), 
+                        linear-gradient(180deg, #111827 0%, var(--bg-main) 100%);
+            padding: 8rem 2rem 6rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFFFFF 30%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .meta-item strong {
+            color: var(--text-main);
+        }
+
+        .sdg-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(239, 68, 68, 0.1);
+            color: #EF4444;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 0.4rem 1.2rem;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1);
+        }
+
+        /* Navigation Bar Component */
         nav {
+            position: -webkit-sticky;
             position: sticky;
             top: 0;
-            background-color: rgba(250, 249, 247, 0.95);
-            backdrop-filter: blur(8px);
+            background-color: var(--bg-nav);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
             z-index: 1000;
-            border-bottom: 1px solid var(--slate-200);
-            padding: 1.25rem 0;
-        }
-
-        .nav-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--gap-med);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--primary);
-            letter-spacing: -0.03em;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
         nav ul {
             display: flex;
+            justify-content: center;
             list-style: none;
-            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
 
         nav a {
+            display: block;
+            padding: 1.2rem 1.5rem;
             text-decoration: none;
             color: var(--text-muted);
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
             transition: var(--transition);
+            position: relative;
         }
 
         nav a:hover {
-            color: var(--emerald-600);
+            color: var(--text-main);
         }
 
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--gap-med);
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+            transform: translateX(-50%);
         }
 
+        nav a:hover::after {
+            width: 60%;
+        }
+
+        /* Layout Main Grid Structure */
         section {
-            padding: var(--gap-large) 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem 2rem;
         }
 
-        .section-header {
-            max-width: 700px;
+        section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
             margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
         }
 
-        .section-header .tagline {
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 40px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Cards and Content Styles */
+        .intro-text {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(17, 24, 39, 0.5) 100%);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-premium);
+        }
+
+        .intro-text p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .sdg-highlight-box {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .sdg-highlight-box h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
             text-transform: uppercase;
-            font-size: 0.7rem;
-            letter-spacing: 0.2em;
-            font-weight: 700;
-            color: var(--emerald-600);
-            display: block;
+            letter-spacing: 1px;
             margin-bottom: 0.5rem;
         }
 
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.04em;
-            line-height: 1.2;
-        }
-
-        #home {
-            padding-top: 6rem;
-            border-bottom: 1px solid var(--slate-200);
-        }
-
-        h1 {
-            font-size: 4.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.05em;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            max-width: 900px;
-        }
-
-        .hero-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3rem;
-            margin-bottom: 3rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .hero-meta strong { color: var(--primary); font-weight: 600; }
-
-        .hero-intro {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: var(--gap-large);
-            align-items: center;
-            padding-bottom: 4rem;
-        }
-
-        .intro-text {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        .sdg-minimal {
-            border-left: 2px solid var(--emerald-100);
-            padding-left: var(--gap-small);
-        }
-
-        .sdg-minimal h4 { color: var(--primary); font-size: 1rem; margin-bottom: 0.25rem; }
-        .sdg-minimal p { font-size: 0.9rem; color: var(--text-muted); }
-
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
         }
 
         .card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--slate-100);
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition);
             display: flex;
             flex-direction: column;
-            transition: var(--transition);
         }
 
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--slate-200);
+            transform: translateY(-8px);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 15px var(--primary-glow);
         }
 
-        .video-wrapper {
+        .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 */
-            background-color: var(--primary);
+            padding-top: 56.25%;
+            background-color: #000;
         }
 
-        .video-wrapper iframe {
+        .video-container iframe {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: 0;
+            opacity: 0.85;
+            transition: var(--transition);
         }
 
-        .card-body {
+        .card:hover .video-container iframe {
+            opacity: 1;
+        }
+
+        .card-content {
             padding: 2rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
-        .card-body h3 {
-            font-size: 1.3rem;
-            color: var(--primary);
+        .card-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
             margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
         }
 
-        .card-body .description {
+        .card-content .desc {
             font-size: 0.95rem;
             color: var(--text-muted);
             margin-bottom: 1.5rem;
+        }
+
+        .card-content .reflection {
+            font-size: 0.95rem;
+            color: rgba(243, 244, 246, 0.85);
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 3px solid var(--primary);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
             flex-grow: 1;
         }
 
-        .card-body .reflection-block {
-            border-top: 1px solid var(--slate-100);
-            padding-top: 1rem;
+        .card-content .reflection-title {
+            display: block;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Buttons Structure */
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
             margin-top: auto;
         }
 
-        .card-body .reflection-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 700;
-            color: var(--emerald-800);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .card-body .reflection-text {
-            font-size: 0.9rem;
-            color: var(--slate-800);
-            line-height: 1.6;
-        }
-
-        .btn-minimal {
-            display: inline-block;
+        .btn-github:hover {
             background-color: var(--primary);
-            color: var(--pure-white);
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 1.5rem;
-            transition: var(--transition);
-            text-align: center;
+            color: #000000;
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px var(--primary-glow);
         }
 
-        .btn-minimal:hover {
-            background-color: var(--emerald-600);
+        .btn-github svg {
+            margin-right: 0.6rem;
+            fill: currentColor;
         }
 
-        .journal-container {
-            max-width: 800px;
+        /* Global Boxes styling */
+        .premium-box {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(17, 24, 39, 0.6) 100%);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-premium);
         }
 
-        .journal-p {
-            font-family: 'Noto Serif', serif;
-            font-style: italic;
-            font-size: 1.5rem;
-            line-height: 1.6;
-            color: var(--primary);
+        .premium-box p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
         }
 
-        .skills-grid {
+        /* Badge Pills Components */
+        .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem;
+            gap: 0.8rem;
         }
 
-        .skill-pill {
-            background-color: var(--emerald-100);
-            color: var(--emerald-950);
-            padding: 0.5rem 1.25rem;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-
-        .resources-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .resource-item {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
+        .skill-tag {
+            background-color: rgba(16, 185, 129, 0.06);
+            color: var(--accent);
+            padding: 0.6rem 1.4rem;
             border-radius: 8px;
-            border: 1px solid var(--slate-100);
-        }
-
-        .resource-item strong { color: var(--primary); display: block; margin-bottom: 0.25rem; }
-        .resource-item span { font-size: 0.9rem; color: var(--text-muted); }
-
-        footer {
-            border-top: 1px solid var(--slate-200);
-            padding: 3rem 0;
-            color: var(--text-muted);
+            font-weight: 600;
             font-size: 0.9rem;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            transition: var(--transition);
         }
 
-        .footer-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--gap-med);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        @media (max-width: 1024px) {
-            h1 { font-size: 3.5rem; }
-            .hero-intro { grid-template-columns: 1fr; gap: var(--gap-med); }
+        .skill-tag:hover {
+            background-color: var(--primary);
+            color: #000000;
+            border-color: var(--primary);
+            transform: translateY(-2px);
         }
 
+        .resources-box h3 {
+            color: var(--text-main);
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+        }
+
+        .resources-box ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .resources-box li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .resources-box li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .acknowledgement {
+            background: rgba(245, 158, 11, 0.04);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+            color: #F59E0B;
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+        }
+
+        /* Site Footer architecture */
+        footer {
+            background-color: #090D16;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 8rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin: 0.4rem 0;
+        }
+
+        footer .name {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Structural Breakpoint Queries */
         @media (max-width: 768px) {
-            html { font-size: 15px; }
-            nav ul { display: none; }
-            h1 { font-size: 2.8rem; }
-            h2 { font-size: 2.1rem; }
-            .grid { grid-template-columns: 1fr; }
-            .footer-container { flex-direction: column; gap: 1rem; text-align: center; }
+            header {
+                padding: 6rem 1rem 4rem 1rem;
+            }
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+            }
+            nav a {
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+            }
+            section {
+                padding: 4rem 1rem 1rem 1rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .intro-text, .premium-box {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Deviya</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#labs">Labs</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#reflection">Reflection</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
+    <header id="home">
+        <div class="header-content">
+            <h1>DEVIYA A/P SAVUNTHI PANDIYAN</h1>
+            <div class="header-meta">
+                <span class="meta-item"><strong>Matric No:</strong> A209778</span>
+                <span class="meta-item"><strong>Programme:</strong> Bachelors of Software Engineering with Honours</span>
+                <span class="meta-item"><strong>Instructor:</strong> Dr. Nazatul Aini</span>
+            </div>
+            <div class="sdg-badge" aria-label="SDG Goal 3: Good Health and Well-being">SDG 3: Good Health & Well-being</div>
         </div>
+    </header>
+
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#labs">Labs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
     </nav>
 
-    <div class="container">
-
-        <section id="home">
-            <h1>DEVIYA A/P SAVUNTHI PANDIYAN</h1>
-            <div class="hero-meta">
-                <span>Matric No: <strong>A209778</strong></span>
-                <span>Instructor: <strong>Dr. Nazatul Aini</strong></span>
-                <span>Programme: <strong>Software Engineering (Honours)</strong></span>
-            </div>
-            <div class="hero-intro">
-                <p class="intro-text">
-                    Welcome to my front-end development and mobile application design repository. As an aspiring software engineer, this e-Portfolio highlights my technical training, architecture implementations, and practical system solutions built throughout my academic term. Through rigorous interface iteration and comprehensive functional testing, I strive to design intuitive digital applications that make software more reliable and accessible to everyone.
-                </p>
-                <div class="sdg-minimal">
-                    <h4>SDG 3 &mdash; Good Health and Well-being</h4>
-                    <p>Utilizing smart mobile technologies to support balanced daily environments, mindfulness routines, and proactive individual stress management.</p>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <div class="intro-text">
+                <p>Welcome to my software engineering e-Portfolio. I am a dedicated front-end and mobile application developer passionate about transforming complex healthcare challenges into seamless digital interfaces. My academic journey focuses heavily on bridging intuitive design principles with high-performance mobile frameworks to build applications that genuinely make a difference in people's daily lives.</p>
+                <div class="sdg-highlight-box">
+                    <h4>Why SDG 3?</h4>
+                    <p style="font-size: 1.1rem; margin: 0;">I am deeply motivated by SDG 3 (Good Health and Well-being) because digital technology has the immense potential to break barriers, making proactive healthcare, mental clarity, and physiological tracking accessible to everyone at their fingertips.</p>
                 </div>
             </div>
         </section>
 
         <section id="labs">
-            <div class="section-header">
-                <h2>Laboratory Exercises</h2>
-            </div>
+            <h2>Laboratory Exercises</h2>
             <div class="grid">
-                <article class="card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/5wlVomSYiRE" title="Lab 1 Visuals" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h3>Lab 1: UI Design</h3>
-                        <p class="description">Foundational layouts, typography hierarchies, and structured compositions using responsive views.</p>
-                        <div class="reflection-block">
-                            <span class="reflection-label">Reflection</span>
-                            <p class="reflection-text">Implementing proper constraints and relative structural layouts taught me the necessity of organizing responsive views efficiently. It laid a clear groundwork for designing responsive, device-independent student viewports.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/PHVjNfoqniw" title="Lab 2 Interactions" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h3>Lab 2: Event Handling</h3>
-                        <p class="description">Binding actions, capturing runtime inputs, and controlling stateful changes based on user behaviors.</p>
-                        <div class="reflection-block">
-                            <span class="reflection-label">Reflection</span>
-                            <p class="reflection-text">Managing state flows and responsive user input listeners clarified how back-end operations tie directly into interfaces. Ensuring immediate visual confirmation execution drastically minimized interaction barriers.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/Wm2ccnrBJ-k" title="Lab 3 Design System" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h3>Lab 3: Material Design</h3>
-                        <p class="description">Integrating standardized palettes, spatial elevations, and modular material tokens into layouts.</p>
-                        <div class="reflection-block">
-                            <span class="reflection-label">Reflection</span>
-                            <p class="reflection-text">Adhering closely to standard design themes ensured intuitive visual consistency with minimal custom design logic. Uniform structural tokens dramatically reduced interface friction.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/vmky3yQ8ngk" title="Lab 4 Workflows" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h3>Lab 4: Navigation Architecture</h3>
-                        <p class="description">Developing robust multi-screen routing systems, lifecycles, and passing runtime parameters safely.</p>
-                        <div class="reflection-block">
-                            <span class="reflection-label">Reflection</span>
-                            <p class="reflection-text">Configuring persistent argument pathways proved crucial for maintaining uniform app states across nested pathways. Preventing data loss or unexpected view drops increased application stability.</p>
-                        </div>
-                    </div>
-                </article>
                 
                 <article class="card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Lab 5 Data Layer" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/5wlVomSYiRE" title="Lab 1 UI Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="card-body">
-                        <h3>Lab 5: Room Storage</h3>
-                        <p class="description">SQLite abstractions, data access objects (DAOs), and multi-thread transaction systems.</p>
-                        <div class="reflection-block">
-                            <span class="reflection-label">Reflection</span>
-                            <p class="reflection-text">Enforcing offline-first architecture via isolated data caching models guaranteed complete operational integrity in low network settings. Mastering thread-safe queries minimized interface lag.</p>
+                    <div class="card-content">
+                        <h3>Lab 1: UI Architecture</h3>
+                        <p class="desc">Constructing modular, structural layouts using custom components.</p>
+                        <div class="reflection">
+                            <span class="reflection-title">Insights</span>
+                            Developing this layout helped me master declarative UI structural principles. I learned how to cleanly organize composition blocks to maintain code readability while optimizing render cycles. Creating scalable design elements early on successfully reduced UI debt as structural complexity grew.
                         </div>
                     </div>
                 </article>
+
+                <article class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PHVjNfoqniw" title="Lab 2 Interaction Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 2: User Interaction</h3>
+                        <p class="desc">Implementing dynamic event listeners and state hoisting techniques.</p>
+                        <div class="reflection">
+                            <span class="reflection-title">Insights</span>
+                            This exercise highlighted the extreme importance of dynamic, context-aware state patterns. Handling complex user touch inputs taught me how to manage real-time UI state mutations smoothly without blocking primary application routines. Resolving unexpected race conditions during rapid component interactions greatly advanced my asynchronous handling skills.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Wm2ccnrBJ-k" title="Lab 3 Material Design Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 3: Material Design</h3>
+                        <p class="desc">Styling native surfaces using strict structural theme specs.</p>
+                        <div class="reflection">
+                            <span class="reflection-title">Insights</span>
+                            Applying modern design rules showed me how unified styling hierarchies instantly refine accessibility and readability. I integrated tailored shape, color, and typography palettes to build interfaces that feel unified, clean, and intuitive. This process taught me to design with visual balance and strict interactive guidance in mind.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/vmky3yQ8ngk" title="Lab 4 Navigation Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 4: Application Navigation</h3>
+                        <p class="desc">Configuring deep navigation routing graphs and payload argument parsing.</p>
+                        <div class="reflection">
+                            <span class="reflection-title">Insights</span>
+                            Building deep routing flows clarified the importance of clean, structured deep linking and decoupled nav paths. Setting up structured routes ensured data remained completely safe and consistent across separate application entry targets. I learned to structure navigation flows logically to keep the user path clear and predictable.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Lab 5 Room Database Video Demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 5: Room Data Persistence</h3>
+                        <p class="desc">Implementing local offline caching using entities, DAOs, and relational schemas.</p>
+                        <div class="reflection">
+                            <span class="reflection-title">Insights</span>
+                            Working with persistent relational databases gave me a deep appreciation for solid offline-first architectures. Designing asynchronous entity tables allowed for smooth offline read/write actions that kept user data fully in sync without degrading UX performance. This background proved vital for managing heavy transaction flows securely in larger apps.
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
 
         <section id="projects">
-            <div class="section-header">
-                <h2>Course Projects</h2>
-            </div>
+            <h2>Capstone Projects</h2>
             <div class="grid">
-            
+
                 <article class="card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/yeiwcY9tgK0" title="Project 1 presentation" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/yeiwcY9tgK0" title="Project 1 App Demonstration Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="card-body">
-                        <h3>Project 1: Shift & Reset (Core)</h3>
-                        <p class="description"><strong>Problem:</strong> Fast-paced lifestyles often prevent individuals from tracking psychological stress indicators, leading to unnoticed mental burnout and exhaustion.</p>
-                        <div class="reflection-block">
-                            <span class="reflection-label">Lessons Learned</span>
-                            <p class="reflection-text">Building this core layout module provided practical insight into keeping multi-step navigation routines efficient and passing state variables without interface lag. reliability and lightweight background services are essential.</p>
+                    <div class="card-content">
+                        <h3>Project 1: Shift & Reset (Core App)</h3>
+                        <p class="desc"><strong>Problem Statement:</strong> Busy professionals lack an interactive tool to manage cognitive stress and balance shift routines, leading to severe burnout.</p>
+                        <div class="reflection">
+                            <span class="reflection-title">Lessons Learned</span>
+                            I learned to transform flat wireframe navigation paths into responsive, working views by mapping interactive flows directly to clear user intents. Handling unexpected runtime lifecycle resets during intense view navigation pushed me to adopt rigorous state-saving practices. This structure ultimately delivered a stable, uninterrupted, and highly intuitive foundation for the final tracking application.
                         </div>
-                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project1" class="btn-minimal" target="_blank">Repository (GitHub)</a>
+                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project1" class="btn-github" target="_blank" rel="noopener noreferrer">
+                            <svg height="18" viewBox="0 0 16 16" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                            Repository Source
+                        </a>
                     </div>
                 </article>
 
                 <article class="card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Project 2 presentation" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Project 2 App Demonstration Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="card-body">
-                        <h3>Project 2: Shift & Reset (Cloud)</h3>
-                        <p class="description"><strong>Problem:</strong> Basic reflection apps fail to respond to environmental shifts or keep data synced across devices, making wellness updates manual and tedious.</p>
-                        <div class="reflection-block">
-                            <span class="reflection-label">Lessons Learned</span>
-                            <p class="reflection-text">Linking third-party APIs alongside remote database platforms proved the value of asynchronous background processing pipelines. decoupling analytical components from UI updates ensures robust live dashboard tracking.</p>
+                    <div class="card-content">
+                        <h3>Project 2: Shift & Reset (Cloud Integration)</h3>
+                        <p class="desc"><strong>Problem Statement:</strong> Users lack proactive health insights due to isolated systems that fail to connect real-time physical indicators with remote health portals.</p>
+                        <div class="reflection">
+                            <span class="reflection-title">Lessons Learned</span>
+                            Integrating live data streams, device hardware sensor channels, and cloud storage taught me how to handle complex data synchronizations properly. I gained extensive experience building structured background queues that prevent latency lag during intense data updates. Ensuring fluid cross-platform sync cycles greatly enhanced the reliability, speed, and real-time responsiveness of the ecosystem.
                         </div>
-                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project2" class="btn-github" target="_blank">Repository (GitHub)</a>
+                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project2" class="btn-github" target="_blank" rel="noopener noreferrer">
+                            <svg height="18" viewBox="0 0 16 16" width="18" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                            Repository Source
+                        </a>
                     </div>
                 </article>
+
             </div>
         </section>
 
         <section id="reflection">
-            <div class="section-header">
-            </div>
-            <div class="journal-container">
-                <p class="journal-p">
-                    "Developing the 'Shift & Reset' ecosystem helped me grow from isolated coding exercises into engineering resilient, production-ready system patterns. Working through unexpected race conditions during database synchronization underscored the importance of keeping architectural components decoupled and clean. Overcoming structural challenges while integrating asynchronous multi-thread endpoints has fundamentally reformed my approach to application modularity and code reuse. This learning journey bridges theoretical software engineering concepts with practical, human-centric development solutions."
-                </p>
+            <h2>Reflection & Learning Journey</h2>
+            <div class="premium-box">
+                <p>This course has fundamentally reshaped my development approach from basic code creation to engineered system design. Navigating the steep learning curve of advanced state management and offline synchronization forced me to build highly resilient, fault-tolerant user flows. Encountering complex runtime sensor exceptions taught me to deeply analyze system performance logs and build solid, protective error fallbacks.</p>
+                <p style="margin-bottom: 0;">Ultimately, this development journey has equipped me with the system-level mindset required to build impactful, highly accessible solutions that fully align with international health standards.</p>
             </div>
         </section>
 
-        <!-- Skills -->
         <section id="skills">
-            <div class="section-header">
-                <span class="tagline">Competencies</span>
-                <h2>Tech Stack & Capabilities</h2>
-            </div>
-            <div class="skills-grid">
-                <span class="skill-pill">Kotlin</span>
-                <span class="skill-pill">Jetpack Compose</span>
-                <span class="skill-pill">Room DB</span>
-                <span class="skill-pill">Retrofit</span>
-                <span class="skill-pill">Firebase Firestore</span>
-                <span class="skill-pill">ML Kit</span>
-                <span class="skill-pill">CameraX</span>
-                <span class="skill-pill">Semantic HTML5 & CSS3</span>
-                <span class="skill-pill">Git</span>
+            <h2>Skills & Tech Stack</h2>
+            <div class="skills-list">
+                <span class="skill-tag">Kotlin</span>
+                <span class="skill-tag">Jetpack Compose</span>
+                <span class="skill-tag">Room Database</span>
+                <span class="skill-tag">Retrofit</span>
+                <span class="skill-tag">Firebase Firestore</span>
+                <span class="skill-tag">ML Kit</span>
+                <span class="skill-tag">CameraX</span>
+                <span class="skill-tag">Android Sensors API</span>
+                <span class="skill-tag">Asynchronous Coroutines</span>
+                <span class="skill-tag">Semantic HTML5 / CSS3</span>
             </div>
         </section>
 
-        <!-- Resources -->
         <section id="resources">
-            <div class="section-header">
-                <span class="tagline">References</span>
-                <h2>Documentation & Tooling</h2>
+            <h2>Resources & Documentation</h2>
+            <div class="premium-box resources-box">
+                <h3>Libraries, Architecture Guidance & APIs Used</h3>
+                <ul>
+                    <li><strong>Jetpack Compose toolkit:</strong> Programmatic interface building using declarative structures.</li>
+                    <li><strong>Room persistence engine:</strong> Abstraction layer over raw SQLite environments to secure local data schemas.</li>
+                    <li><strong>Firebase Firestore SDK:</strong> Cloud storage for instant user record updates across live webhooks.</li>
+                    <li><strong>Android Device Sensors pipeline:</strong> Access routines for managing live physical data streams safely.</li>
+                </ul>
+                <div class="acknowledgement">
+                    <strong>AI Assistance Acknowledgement:</strong> Generative AI models were utilized responsibly during development to optimize background data structures, refine theme styles, and ensure the portfolio markup remains completely accessible and valid.
+                </div>
             </div>
-            <ul class="resources-list">
-                <li class="resource-item"><strong>Jetpack Compose</strong><span>Declarative UI structures and accelerated rendering pipelines.</span></li>
-                <li class="resource-item"><strong>Firebase Web/Mobile API</strong><span>Real-time data states across disconnected application runtimes.</span></li>
-                <li class="resource-item"><strong>Android Hardware Sensors</strong><span>Interface access to telemetry hooks for ambient measurements.</span></li>
-                <li class="resource-item"><strong>AI Assistance Statement</strong><span>Refining CSS responsive design and editing system documentation logs.</span></li>
-            </ul>
         </section>
-
-    </div>
+    </main>
 
     <footer>
-        <div class="footer-container">
-            <div>DEVIYA A/P SAVUNTHI PANDIYAN | Matric A209778</div>
-            <div>&copy; 2026 Student e-Portfolio</div>
-        </div>
+        <p class="name">Deviya A/P Savunthi Pandiyan</p>
+        <p>Matric: A209778 | Bachelors of Software Engineering with Honours</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: rgba(156, 163, 175, 0.4);">&copy; 2026 Student E-Portfolio. Built for GitHub Pages.</p>
     </footer>
 
 </body>
