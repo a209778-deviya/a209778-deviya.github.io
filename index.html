@@ -1,35 +1,44 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deviya A/P Savunti Pandiyan | e-Portfolio</title>
+    <title>Deviya A/P Savunthi Pandiyan | e-Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --glass-bg: rgba(255, 255, 255, 0.75);
-            --glass-border: rgba(230, 235, 230, 0.8);
-    
-            --emerald-950: #062312;
-            --emerald-900: #0a3d1e;
-            --emerald-800: #10592e;
-            --emerald-600: #1b8747;
-            --emerald-500: #22c55e;
-            --emerald-100: #ecfdf5;
-            --emerald-50: #f4fbf7;
+
+            --off-white: #FAF9F7;
+            --pure-white: #FFFFFF;
+            --slate-100: #F1F5F9;
+            --slate-200: #E2E8F0;
+            --slate-700: #334155;
+            --slate-800: #1E293B;
+            --slate-900: #0F172A;
             
-            --slate-900: #0f172a;
-            --slate-600: #475569;
-            --slate-400: #94a3b8;
+            --emerald-100: #DCFCE7;
+            --emerald-600: #16A34A;
+            --emerald-800: #166534;
+            --emerald-950: #052E16;
             
-            --max-width: 1200px;
-            --card-radius: 20px;
-            --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            --shadow-subtle: 0 4px 30px rgba(0, 0, 0, 0.03);
-            --shadow-premium: 0 20px 40px rgba(10, 61, 30, 0.05);
+            --primary: var(--emerald-950);
+            --primary-bg: var(--off-white);
+            --card-bg: var(--pure-white);
+            --text-main: var(--slate-800);
+            --text-muted: var(--slate-700);
+            
+            --max-width: 1140px;
+            --gap-large: 4rem;
+            --gap-med: 2rem;
+            --gap-small: 1rem;
+            
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * {
@@ -40,111 +49,80 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            font-size: 16px;
+            scroll-padding-top: 80px;
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--emerald-50);
-            color: var(--slate-900);
-            line-height: 1.7;
-            overflow-x: hidden;
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
             letter-spacing: -0.01em;
         }
-        .ambient-glow-1 {
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, rgba(255,255,255,0) 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
 
-        .ambient-glow-2 {
-            position: absolute;
-            top: 1200px;
-            left: -300px;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(16, 89, 46, 0.05) 0%, rgba(255,255,255,0) 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
         nav {
             position: sticky;
-            top: 20px;
-            max-width: calc(var(--max-width) - 40px);
+            top: 0;
+            background-color: rgba(250, 249, 247, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--slate-200);
+            padding: 1.25rem 0;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
             margin: 0 auto;
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 100px;
-            padding: 0.75rem 2rem;
+            padding: 0 var(--gap-med);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
-            box-shadow: var(--shadow-subtle);
         }
 
         nav .logo {
             font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--emerald-950);
+            font-size: 1.25rem;
+            color: var(--primary);
             letter-spacing: -0.03em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        nav .logo::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: var(--emerald-600);
-            border-radius: 50%;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--slate-600);
+            color: var(--text-muted);
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition-smooth);
+            font-size: 0.9rem;
+            transition: var(--transition);
         }
 
         nav a:hover {
-            color: var(--emerald-800);
+            color: var(--emerald-600);
         }
 
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 var(--gap-med);
         }
 
         section {
-            padding: 6rem 0 2rem 0;
+            padding: var(--gap-large) 0;
         }
 
         .section-header {
-            margin-bottom: 3.5rem;
-            position: relative;
+            max-width: 700px;
+            margin-bottom: 3rem;
         }
 
-        .section-header span {
+        .section-header .tagline {
             text-transform: uppercase;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             letter-spacing: 0.2em;
             font-weight: 700;
             color: var(--emerald-600);
@@ -153,383 +131,263 @@
         }
 
         h2 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
             font-size: 2.5rem;
-            color: var(--emerald-950);
-            letter-spacing: -0.03em;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.04em;
+            line-height: 1.2;
         }
 
         #home {
-            padding-top: 4rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .hero-badge {
-            background-color: var(--white);
-            border: 1px solid var(--glass-border);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--emerald-800);
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow-subtle);
+            padding-top: 6rem;
+            border-bottom: 1px solid var(--slate-200);
         }
 
         h1 {
-            font-size: 4rem;
-            line-height: 1.1;
+            font-size: 4.5rem;
             font-weight: 700;
-            color: var(--emerald-950);
-            letter-spacing: -0.04em;
-            margin-bottom: 1.5rem;
+            color: var(--primary);
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+            margin-bottom: 2rem;
             max-width: 900px;
         }
 
-        .hero-meta-grid {
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .hero-meta strong { color: var(--primary); font-weight: 600; }
+
+        .hero-intro {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            width: 100%;
-            margin: 2rem 0 3.5rem 0;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(16, 89, 46, 0.08);
-            border-bottom: 1px solid rgba(16, 89, 46, 0.08);
-        }
-
-        .meta-item .label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--slate-400);
-            margin-bottom: 0.25rem;
-        }
-
-        .meta-item .value {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--emerald-950);
-        }
-
-        .intro-block {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            align-items: start;
-            margin-bottom: 2rem;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--gap-large);
+            align-items: center;
+            padding-bottom: 4rem;
         }
 
         .intro-text {
-            font-size: 1.25rem;
-            color: var(--slate-600);
-            line-height: 1.8;
-            font-weight: 400;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
 
-        .sdg-card {
-            background: linear-gradient(135deg, var(--emerald-950) 0%, var(--emerald-900) 100%);
-            color: var(--white);
-            padding: 2.5rem;
-            border-radius: var(--card-radius);
-            box-shadow: var(--shadow-premium);
-            position: relative;
-            overflow: hidden;
+        .sdg-minimal {
+            border-left: 2px solid var(--emerald-100);
+            padding-left: var(--gap-small);
         }
 
-        .sdg-card::before {
-            content: '03';
-            position: absolute;
-            right: -20px;
-            bottom: -30px;
-            font-size: 10rem;
-            font-weight: 800;
-            color: rgba(255, 255, 255, 0.03);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .sdg-card h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-            color: var(--emerald-50);
-        }
-
-        .sdg-card p {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
+        .sdg-minimal h4 { color: var(--primary); font-size: 1rem; margin-bottom: 0.25rem; }
+        .sdg-minimal p { font-size: 0.9rem; color: var(--text-muted); }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
-            background: #ffffff;
-            border-radius: var(--card-radius);
+            background-color: var(--card-bg);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--shadow-subtle);
-            border: 1px solid rgba(230, 235, 230, 0.5);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--slate-100);
             display: flex;
             flex-direction: column;
-            transition: var(--transition-smooth);
+            transition: var(--transition);
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-premium);
-            border-color: rgba(16, 89, 46, 0.15);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--slate-200);
         }
 
-        .video-container {
+        .video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%;
-            background-color: var(--emerald-950);
-            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 */
+            background-color: var(--primary);
         }
 
-        .video-container iframe {
+        .video-wrapper iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             border: 0;
-            transition: var(--transition-smooth);
         }
 
-        .card-content {
-            padding: 2.5rem;
+        .card-body {
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
-        .card-content h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--emerald-950);
-            margin-bottom: 0.75rem;
+        .card-body h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
         }
 
-        .card-content .desc {
-            font-size: 1rem;
-            color: var(--slate-600);
-            margin-bottom: 1.75rem;
+        .card-body .description {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
-        .card-content .label-mini {
-            font-size: 0.75rem;
+        .card-body .reflection-block {
+            border-top: 1px solid var(--slate-100);
+            padding-top: 1rem;
+            margin-top: auto;
+        }
+
+        .card-body .reflection-label {
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
             font-weight: 700;
             color: var(--emerald-800);
             margin-bottom: 0.5rem;
+            display: block;
         }
 
-        .card-content .reflection {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--emerald-50);
-            border-left: 3px solid var(--emerald-600);
-            padding: 1.25rem;
-            border-radius: 0 var(--card-radius) var(--card-radius) 0;
-            margin-top: auto;
-            font-size: 0.95rem;
-            color: var(--emerald-950);
+        .card-body .reflection-text {
+            font-size: 0.9rem;
+            color: var(--slate-800);
             line-height: 1.6;
         }
 
-        .btn-github {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: var(--emerald-950);
-            color: #ffffff;
+        .btn-minimal {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--pure-white);
             text-decoration: none;
-            padding: 0.9rem 1.5rem;
-            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-top: 1.5rem;
-            transition: var(--transition-smooth);
+            transition: var(--transition);
+            text-align: center;
         }
 
-        .btn-github:hover {
+        .btn-minimal:hover {
             background-color: var(--emerald-600);
-            transform: scale(1.02);
         }
 
-        .editorial-wrapper {
-            background: #ffffff;
-            border-radius: var(--card-radius);
-            padding: 4rem;
-            box-shadow: var(--shadow-subtle);
-            border: 1px solid rgba(230, 235, 230, 0.5);
-            max-width: 900px;
-        }
-
-        .editorial-p {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.6rem;
-            line-height: 1.7;
-            color: var(--emerald-900);
-        }
-
-        /* Premium Minimal Tags */
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
+        .journal-container {
             max-width: 800px;
         }
 
-        .skill-tag {
-            background-color: #ffffff;
+        .journal-p {
+            font-family: 'Noto Serif', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: var(--primary);
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-pill {
+            background-color: var(--emerald-100);
             color: var(--emerald-950);
-            border: 1px solid var(--glass-border);
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1.25rem;
             border-radius: 100px;
             font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: var(--shadow-subtle);
-            transition: var(--transition-smooth);
+            font-size: 0.85rem;
         }
 
-        .skill-tag:hover {
-            border-color: var(--emerald-600);
-            color: var(--emerald-600);
-            transform: translateY(-2px);
-        }
-
-        .resources-grid {
+        .resources-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            list-style: none;
         }
 
-        .resource-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 2rem;
-            border: 1px solid rgba(230, 235, 230, 0.5);
-            box-shadow: var(--shadow-subtle);
+        .resource-item {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--slate-100);
         }
 
-        .resource-card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--emerald-950);
-            margin-bottom: 0.5rem;
-        }
-
-        .resource-card p {
-            font-size: 0.9rem;
-            color: var(--slate-600);
-        }
+        .resource-item strong { color: var(--primary); display: block; margin-bottom: 0.25rem; }
+        .resource-item span { font-size: 0.9rem; color: var(--text-muted); }
 
         footer {
-            background-color: var(--emerald-950);
-            color: rgba(255, 255, 255, 0.7);
-            padding: 5rem 2rem;
-            margin-top: 8rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--slate-200);
+            padding: 3rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
-        .footer-content {
+        .footer-container {
             max-width: var(--max-width);
             margin: 0 auto;
+            padding: 0 var(--gap-med);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .footer-identity h5 {
-            font-size: 1.2rem;
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            letter-spacing: -0.02em;
-        }
-
-        .footer-identity p {
-            font-size: 0.9rem;
-            color: var(--slate-400);
-        }
-
-        .footer-year {
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
         @media (max-width: 1024px) {
-            h1 { font-size: 3.2rem; }
-            .intro-block { grid-template-columns: 1fr; gap: 2rem; }
-            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 3.5rem; }
+            .hero-intro { grid-template-columns: 1fr; gap: var(--gap-med); }
         }
 
         @media (max-width: 768px) {
-            nav { top: 10px; padding: 0.5rem 1.25rem; }
+            html { font-size: 15px; }
             nav ul { display: none; }
-            h1 { font-size: 2.5rem; }
-            .editorial-wrapper { padding: 2rem; }
-            .editorial-p { font-size: 1.3rem; }
-            .footer-content { flex-direction: column; align-items: flex-start; gap: 2rem; }
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.1rem; }
+            .grid { grid-template-columns: 1fr; }
+            .footer-container { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-glow-1"></div>
-    <div class="ambient-glow-2"></div>
-
     <nav>
-        <div class="logo">Deviya</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#labs">Labs</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#reflection">Reflection</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#resources">Resources</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="logo">Deviya</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#labs">Labs</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
 
         <section id="home">
-            <div class="hero-badge">Engineering Portfolio &bull; 2026</div>
-            <h1>DEVIYA A/P SAVUNTI PANDIYAN</h1>
-            
-            <div class="hero-meta-grid">
-                <div class="meta-item">
-                    <div class="label">Programme</div>
-                    <div class="value">Software Engineering (Honours)</div>
-                </div>
-                <div class="meta-item">
-                    <div class="label">Matric Number</div>
-                    <div class="value">A209778</div>
-                </div>
-                <div class="meta-item">
-                    <div class="label">Instructor</div>
-                    <div class="value">Dr. Nazatul Aini</div>
-                </div>
+            <h1>DEVIYA A/P SAVUNTHI PANDIYAN</h1>
+            <div class="hero-meta">
+                <span>Matric No: <strong>A209778</strong></span>
+                <span>Instructor: <strong>Dr. Nazatul Aini</strong></span>
+                <span>Programme: <strong>Software Engineering (Honours)</strong></span>
             </div>
-
-            <div class="intro-block">
+            <div class="hero-intro">
                 <p class="intro-text">
                     Welcome to my front-end development and mobile application design repository. As an aspiring software engineer, this e-Portfolio highlights my technical training, architecture implementations, and practical system solutions built throughout my academic term. Through rigorous interface iteration and comprehensive functional testing, I strive to design intuitive digital applications that make software more reliable and accessible to everyone.
                 </p>
-                <div class="sdg-card">
-                    <h4>SDG 3 &mdash; Good Health</h4>
+                <div class="sdg-minimal">
+                    <h4>SDG 3 &mdash; Good Health and Well-being</h4>
                     <p>Utilizing smart mobile technologies to support balanced daily environments, mindfulness routines, and proactive individual stress management.</p>
                 </div>
             </div>
@@ -537,77 +395,76 @@
 
         <section id="labs">
             <div class="section-header">
-                <span>Core Practicums</span>
                 <h2>Laboratory Exercises</h2>
             </div>
             <div class="grid">
                 <article class="card">
-                    <div class="video-container">
+                    <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/5wlVomSYiRE" title="Lab 1 Visuals" allowfullscreen></iframe>
                     </div>
-                    <div class="card-content">
-                        <h3>Lab 1: User Interface Design</h3>
-                        <p class="desc">Constructing foundational layouts, typography hierarchies, and structured visual compositions using responsive views.</p>
-                        <div class="label-mini">Engineering Reflection</div>
-                        <p class="reflection">
-                            Implementing proper constraints and relative structural layouts taught me the necessity of organizing responsive views efficiently from the initial stage. This setup eliminated design overhead and simplified rendering across variable resolutions. It laid a clear groundwork for designing responsive, device-independent student viewports down the line.
-                        </p>
+                    <div class="card-body">
+                        <h3>Lab 1: UI Design</h3>
+                        <p class="description">Foundational layouts, typography hierarchies, and structured compositions using responsive views.</p>
+                        <div class="reflection-block">
+                            <span class="reflection-label">Reflection</span>
+                            <p class="reflection-text">Implementing proper constraints and relative structural layouts taught me the necessity of organizing responsive views efficiently. It laid a clear groundwork for designing responsive, device-independent student viewports.</p>
+                        </div>
                     </div>
                 </article>
 
                 <article class="card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/PHVjNfoqniw" title="Lab 2 Control Flow" allowfullscreen></iframe>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/PHVjNfoqniw" title="Lab 2 Interactions" allowfullscreen></iframe>
                     </div>
-                    <div class="card-content">
-                        <h3>Lab 2: Interaction & Event Handling</h3>
-                        <p class="desc">Binding actions, capturing runtime inputs, and controlling stateful changes based on reactive user behaviors.</p>
-                        <div class="label-mini">Engineering Reflection</div>
-                        <p class="reflection">
-                            Managing state flows and responsive user input listeners clarified how back-end operations dynamically tie directly into functional interface components. Ensuring immediate visual confirmation upon action execution drastically minimized interaction barriers and improved user retention. This direct control feedback is essential for maintaining app responsiveness during long sessions.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Wm2ccnrBJ-k" title="Lab 3 Design Systems" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-content">
-                        <h3>Lab 3: Material Design Standards</h3>
-                        <p class="desc">Integrating standardized palettes, spatial elevations, floating nodes, and modular material tokens into layouts.</p>
-                        <div class="label-mini">Engineering Reflection</div>
-                        <p class="reflection">
-                            Adhering closely to standard design themes ensured our layouts achieved intuitive visual consistency with minimal custom design logic. Applying uniform structural tokens dramatically reduced interface friction and helped guide user focus naturally through clear visual priorities. This structured style makes navigating deep technical systems feel simple and predictable.
-                        </p>
+                    <div class="card-body">
+                        <h3>Lab 2: Event Handling</h3>
+                        <p class="description">Binding actions, capturing runtime inputs, and controlling stateful changes based on user behaviors.</p>
+                        <div class="reflection-block">
+                            <span class="reflection-label">Reflection</span>
+                            <p class="reflection-text">Managing state flows and responsive user input listeners clarified how back-end operations tie directly into interfaces. Ensuring immediate visual confirmation execution drastically minimized interaction barriers.</p>
+                        </div>
                     </div>
                 </article>
 
                 <article class="card">
-                    <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Wm2ccnrBJ-k" title="Lab 3 Design System" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h3>Lab 3: Material Design</h3>
+                        <p class="description">Integrating standardized palettes, spatial elevations, and modular material tokens into layouts.</p>
+                        <div class="reflection-block">
+                            <span class="reflection-label">Reflection</span>
+                            <p class="reflection-text">Adhering closely to standard design themes ensured intuitive visual consistency with minimal custom design logic. Uniform structural tokens dramatically reduced interface friction.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/vmky3yQ8ngk" title="Lab 4 Workflows" allowfullscreen></iframe>
                     </div>
-                    <div class="card-content">
-                        <h3>Lab 4: Advanced Navigation Architecture</h3>
-                        <p class="desc">Developing robust multi-screen routing systems, backstack lifecycles, and passing runtime parameter arguments safely.</p>
-                        <div class="label-mini">Engineering Reflection</div>
-                        <p class="reflection">
-                            Configuring persistent argument pathways and multi-view routing trees proved crucial for maintaining uniform app states across deeply nested pathways. Preventing data loss or unexpected view drops during unexpected device configuration changes vastly increased application stability. This robust framework handles intricate user journeys with complete transparency.
-                        </p>
+                    <div class="card-body">
+                        <h3>Lab 4: Navigation Architecture</h3>
+                        <p class="description">Developing robust multi-screen routing systems, lifecycles, and passing runtime parameters safely.</p>
+                        <div class="reflection-block">
+                            <span class="reflection-label">Reflection</span>
+                            <p class="reflection-text">Configuring persistent argument pathways proved crucial for maintaining uniform app states across nested pathways. Preventing data loss or unexpected view drops increased application stability.</p>
+                        </div>
                     </div>
                 </article>
-
+                
                 <article class="card">
-                    <div class="video-container">
+                    <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Lab 5 Data Layer" allowfullscreen></iframe>
                     </div>
-                    <div class="card-content">
-                        <h3>Lab 5: Local Room Storage & Offline Caching</h3>
-                        <p class="desc">Configuring SQLite structural abstractions, data access objects (DAOs), and multi-thread transaction systems.</p>
-                        <div class="label-mini">Engineering Reflection</div>
-                        <p class="reflection">
-                            Enforcing offline-first architecture via isolated data caching models guaranteed complete operational integrity even in low or disconnected network settings. Mastering thread-safe repository queries minimized interface lag, allowing data updates to post fluidly to the background without freezing the UI. This reliable pipeline ensures user information remains secured locally.
-                        </p>
+                    <div class="card-body">
+                        <h3>Lab 5: Room Storage</h3>
+                        <p class="description">SQLite abstractions, data access objects (DAOs), and multi-thread transaction systems.</p>
+                        <div class="reflection-block">
+                            <span class="reflection-label">Reflection</span>
+                            <p class="reflection-text">Enforcing offline-first architecture via isolated data caching models guaranteed complete operational integrity in low network settings. Mastering thread-safe queries minimized interface lag.</p>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -615,41 +472,37 @@
 
         <section id="projects">
             <div class="section-header">
-                <span>Production Artifacts</span>
                 <h2>Course Projects</h2>
             </div>
             <div class="grid">
+            
                 <article class="card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/yeiwcY9tgK0" title="Project 1 System Core" allowfullscreen></iframe>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/yeiwcY9tgK0" title="Project 1 presentation" allowfullscreen></iframe>
                     </div>
-                    <div class="card-content">
-                        <h3>Project 1: Shift & Reset (Core App)</h3>
-                        <p class="desc"><strong>Problem Statement:</strong> Fast-paced lifestyles often prevent individuals from tracking psychological stress indicators, leading to unnoticed mental burnout and exhaustion.</p>
-                        <div class="label-mini">Key Lessons Learned</div>
-                        <p class="reflection">
-                            Building this core layout module provided practical insight into keeping multi-step navigation routines efficient and passing state variables without interface lag. Designing a system that actively promotes daily mental health requires absolute operational reliability and lightweight background services.
-                        </p>
-                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project1" class="btn-github" target="_blank">
-                            <span>View on GitHub Repository</span>
-                        </a>
+                    <div class="card-body">
+                        <h3>Project 1: Shift & Reset (Core)</h3>
+                        <p class="description"><strong>Problem:</strong> Fast-paced lifestyles often prevent individuals from tracking psychological stress indicators, leading to unnoticed mental burnout and exhaustion.</p>
+                        <div class="reflection-block">
+                            <span class="reflection-label">Lessons Learned</span>
+                            <p class="reflection-text">Building this core layout module provided practical insight into keeping multi-step navigation routines efficient and passing state variables without interface lag. reliability and lightweight background services are essential.</p>
+                        </div>
+                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project1" class="btn-minimal" target="_blank">Repository (GitHub)</a>
                     </div>
                 </article>
 
                 <article class="card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Project 2 Cloud Modules" allowfullscreen></iframe>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Project 2 presentation" allowfullscreen></iframe>
                     </div>
-                    <div class="card-content">
-                        <h3>Project 2: Shift & Reset (Cloud & Sensors)</h3>
-                        <p class="desc"><strong>Problem Statement:</strong> Basic reflection apps fail to respond to environmental shifts or keep data synced across devices, making personal wellness updates manual and tedious.</p>
-                        <div class="label-mini">Key Lessons Learned</div>
-                        <p class="reflection">
-                            Linking third-party APIs alongside remote database platforms proved the significant value of asynchronous background processing pipelines. I discovered that decoupling analytical components from UI updates ensures robust live dashboard tracking, even when processing high-volume sensor inputs.
-                        </p>
-                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project2" class="btn-github" target="_blank">
-                            <span>View on GitHub Repository</span>
-                        </a>
+                    <div class="card-body">
+                        <h3>Project 2: Shift & Reset (Cloud)</h3>
+                        <p class="description"><strong>Problem:</strong> Basic reflection apps fail to respond to environmental shifts or keep data synced across devices, making wellness updates manual and tedious.</p>
+                        <div class="reflection-block">
+                            <span class="reflection-label">Lessons Learned</span>
+                            <p class="reflection-text">Linking third-party APIs alongside remote database platforms proved the value of asynchronous background processing pipelines. decoupling analytical components from UI updates ensures robust live dashboard tracking.</p>
+                        </div>
+                        <a href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project2" class="btn-github" target="_blank">Repository (GitHub)</a>
                     </div>
                 </article>
             </div>
@@ -657,74 +510,55 @@
 
         <section id="reflection">
             <div class="section-header">
-                <span>The Journey</span>
-                <h2>Reflection & Epilogue</h2>
             </div>
-            <div class="editorial-wrapper">
-                <p class="editorial-p">
+            <div class="journal-container">
+                <p class="journal-p">
                     "Developing the 'Shift & Reset' ecosystem helped me grow from isolated coding exercises into engineering resilient, production-ready system patterns. Working through unexpected race conditions during database synchronization underscored the importance of keeping architectural components decoupled and clean. Overcoming structural challenges while integrating asynchronous multi-thread endpoints has fundamentally reformed my approach to application modularity and code reuse. This learning journey bridges theoretical software engineering concepts with practical, human-centric development solutions."
                 </p>
             </div>
         </section>
 
+        <!-- Skills -->
         <section id="skills">
             <div class="section-header">
-                <span>Capabilities</span>
-                <h2>Skills & Tech Stack</h2>
+                <span class="tagline">Competencies</span>
+                <h2>Tech Stack & Capabilities</h2>
             </div>
-            <div class="skills-list">
-                <span class="skill-tag">Kotlin</span>
-                <span class="skill-tag">Jetpack Compose</span>
-                <span class="skill-tag">Room DB</span>
-                <span class="skill-tag">Retrofit</span>
-                <span class="skill-tag">Firebase Firestore</span>
-                <span class="skill-tag">ML Kit</span>
-                <span class="skill-tag">CameraX</span>
-                <span class="skill-tag">Semantic HTML5 & CSS3</span>
-                <span class="skill-tag">Git & GitHub CI/CD</span>
+            <div class="skills-grid">
+                <span class="skill-pill">Kotlin</span>
+                <span class="skill-pill">Jetpack Compose</span>
+                <span class="skill-pill">Room DB</span>
+                <span class="skill-pill">Retrofit</span>
+                <span class="skill-pill">Firebase Firestore</span>
+                <span class="skill-pill">ML Kit</span>
+                <span class="skill-pill">CameraX</span>
+                <span class="skill-pill">Semantic HTML5 & CSS3</span>
+                <span class="skill-pill">Git</span>
             </div>
         </section>
 
+        <!-- Resources -->
         <section id="resources">
             <div class="section-header">
-                <span>References</span>
+                <span class="tagline">References</span>
                 <h2>Documentation & Tooling</h2>
             </div>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h4>Jetpack Compose</h4>
-                    <p>Provided clean, declarative UI structures and accelerated rendering layout pipelines.</p>
-                </div>
-                <div class="resource-card">
-                    <h4>Firebase Cloud API</h4>
-                    <p>Hosted and synchronized real-time data states effortlessly across disconnected application runtimes.</p>
-                </div>
-                <div class="resource-card">
-                    <h4>Android Core Telemetry</h4>
-                    <p>Offered direct interface access to telemetry hooks, turning ambient measurements into useful user data points.</p>
-                </div>
-                <div class="resource-card">
-                    <h4>AI Systems Statement</h4>
-                    <p>Generative AI workflows were utilized for generating placeholder code, refining CSS responsive design structures, and editing system documentation logs to match clean-code compliance.</p>
-                </div>
-            </div>
+            <ul class="resources-list">
+                <li class="resource-item"><strong>Jetpack Compose</strong><span>Declarative UI structures and accelerated rendering pipelines.</span></li>
+                <li class="resource-item"><strong>Firebase Web/Mobile API</strong><span>Real-time data states across disconnected application runtimes.</span></li>
+                <li class="resource-item"><strong>Android Hardware Sensors</strong><span>Interface access to telemetry hooks for ambient measurements.</span></li>
+                <li class="resource-item"><strong>AI Assistance Statement</strong><span>Refining CSS responsive design and editing system documentation logs.</span></li>
+            </ul>
         </section>
 
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-identity">
-                <h5>DEVIYA A/P SAVUNTI PANDIYAN</h5>
-                <p>Bachelors of Software Engineering with Honours &bull; Matric A209778</p>
-            </div>
-            <div class="footer-year">
-                &copy; 2026 e-Portfolio
-            </div>
+        <div class="footer-container">
+            <div>DEVIYA A/P SAVUNTHI PANDIYAN | Matric A209778</div>
+            <div>&copy; 2026 Student e-Portfolio</div>
         </div>
     </footer>
 
 </body>
 </html>
-
-```
