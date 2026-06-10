@@ -1,90 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deviya A/P Savunti Pandiyan | e-Portfolio</title>
+
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Premium e-Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--primary:#0f9d58;--bg:#f6faf7;--card:#fff}
-html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#333}
-nav{position:sticky;top:0;background:#0f9d58;padding:12px;display:flex;gap:18px;justify-content:center}
-nav a{color:#fff;text-decoration:none;font-weight:bold}
-header,section,footer{max-width:1100px;margin:auto;padding:40px 20px}
-header{padding-top:80px;text-align:center}
-h1,h2{color:#0f9d58}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-iframe{width:100%;height:220px;border:0}
-.btn{display:inline-block;background:#0f9d58;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
-footer{text-align:center;background:#222;color:#fff;max-width:none}
-</style>
-</head>
-<body>
-<nav>
-<a href="#home">Home</a>
-<a href="#labs">Labs</a>
-<a href="#projects">Projects</a>
-<a href="#reflection">Reflection</a>
-<a href="#skills">Skills</a>
-<a href="#resources">Resources</a>
-</nav>
-
-<header id="home">
-<h1>DEVIYA A/P SAVUNTI PANDIYAN</h1>
-<p><strong>Matric:</strong> A209778</p>
-<p><strong>Programme:</strong> Bachelor of Software Engineering with Honours</p>
-<p><strong>Instructor:</strong> Dr. Nazatul Aini</p>
-<p>I am a Software Engineering student passionate about creating practical mobile applications that improve everyday life. This portfolio showcases my laboratory exercises and projects while documenting my growth in Android development and problem solving.</p>
-<p><strong>SDG 3 – Good Health and Well-being:</strong> I chose SDG 3 because technology can encourage healthier habits and support better mental and physical well-being.</p>
-</header>
-
-<section id="labs">
-<h2>Labs</h2>
-<div class="grid">
-<div class="card"><h3>Lab 1 – UI</h3><p>Designed the application's initial user interface.</p><iframe src="https://www.youtube.com/embed/5wlVomSYiRE" title="Lab 1 – UI"></iframe><p><strong>Reflection:</strong> This lab helped me understand layout planning and user-centred design. I also improved my ability to build clean and organised interfaces.</p></div><div class="card"><h3>Lab 2 – Interaction</h3><p>Implemented user interactions.</p><iframe src="https://www.youtube.com/embed/PHVjNfoqniw" title="Lab 2 – Interaction"></iframe><p><strong>Reflection:</strong> I learned how to connect UI elements with application logic. Interactive feedback greatly improves usability.</p></div><div class="card"><h3>Lab 3 – Material Design</h3><p>Applied Material Design.</p><iframe src="https://www.youtube.com/embed/Wm2ccnrBJ-k" title="Lab 3 – Material Design"></iframe><p><strong>Reflection:</strong> Following design guidelines made the app more consistent and accessible. It also improved visual quality.</p></div><div class="card"><h3>Lab 4 – Navigation</h3><p>Built multi-screen navigation.</p><iframe src="https://www.youtube.com/embed/vmky3yQ8ngk" title="Lab 4 – Navigation"></iframe><p><strong>Reflection:</strong> I gained experience creating smooth navigation flows. Good navigation is essential for user experience.</p></div><div class="card"><h3>Lab 5 – Room</h3><p>Integrated Room database.</p><iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Lab 5 – Room"></iframe><p><strong>Reflection:</strong> This lab introduced local persistence and structured data management. I better understood Android architecture.</p></div></div></section>
-<section id="projects"><h2>Projects</h2><div class="grid">
-<div class="card">
-<h3>Project 1 – Shift &amp; Reset</h3>
-<p><strong>Problem:</strong> Students often experience burnout and stress without proper support tools.</p>
-<iframe src="https://www.youtube.com/embed/yeiwcY9tgK0" title="Project1"></iframe>
-<p><strong>Reflection:</strong> I learned to combine navigation and functional features into a cohesive application. The project strengthened my software design skills.</p>
-<p><a class="btn" href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project1" target="_blank">View on GitHub</a></p>
-</div>
-
-<div class="card">
-<h3>Project 2 – Shift &amp; Reset</h3>
-<p><strong>Problem:</strong> Wellness applications should integrate cloud services, APIs and sensors for better experiences.</p>
-<iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Project2"></iframe>
-<p><strong>Reflection:</strong> This project improved my understanding of APIs, Room, cloud synchronisation and sensors. I became more confident building complete Android solutions.</p>
-<p><a class="btn" href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project2" target="_blank">View on GitHub</a></p>
-</div>
+html{scroll-behavior:smooth}body{margin:0;font-family:Poppins,sans-serif;background:#eef8f0;color:#243}
+header{min-height:100vh;background:linear-gradient(135deg,#0b8f58,#6edb8d);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:40px}
+.hero{max-width:900px}.avatar{width:140px;height:140px;border-radius:50%;background:#ffffff33;margin:auto;display:flex;align-items:center;justify-content:center;font-size:60px;border:4px solid #fff}
+nav{position:sticky;top:0;background:rgba(8,77,46,.9);backdrop-filter:blur(10px);padding:14px;display:flex;justify-content:center;gap:22px;z-index:99}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+section{padding:70px 22px;max-width:1250px;margin:auto}h2{text-align:center;color:#0b8f58}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.card{background:#fff;border-radius:22px;padding:20px;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.3s}.card:hover{transform:translateY(-8px)}
+iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:14px}
+.btn{display:inline-block;background:linear-gradient(135deg,#0b8f58,#58ca78);padding:12px 18px;border-radius:999px;color:#fff;text-decoration:none}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}.stat{background:#fff;padding:20px;border-radius:18px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.bar{height:12px;background:#ddd;border-radius:999px}.fill{height:12px;background:linear-gradient(90deg,#0b8f58,#7ae39b);border-radius:999px}
+footer{background:#0a4d2e;color:#fff;text-align:center;padding:24px}
+.timeline{border-left:4px solid #0b8f58;padding-left:20px}.timeline div{margin:18px 0}
+</style></head><body>
+<nav><a href="#home">Home</a><a href="#labs">Labs</a><a href="#projects">Projects</a><a href="#reflection">Reflection</a><a href="#skills">Skills</a><a href="#resources">Resources</a></nav>
+<header id="home"><div class="hero"><div class="avatar">D</div><h1>DEVIYA A/P SAVUNTI PANDIYAN</h1><h3>A209778 • Bachelor of Software Engineering with Honours</h3><p>Instructor: Dr. Nazatul Aini</p><p>I am passionate about creating user-centred mobile applications that promote meaningful impact through technology. This portfolio showcases my learning journey and projects aligned with SDG 3: Good Health and Well-being.</p><a class="btn" href="#labs">Explore Portfolio</a></div></header>
+<section><h2>Portfolio Highlights</h2><div class="stats"><div class="stat"><h1>5</h1>Labs</div><div class="stat"><h1>2</h1>Projects</div><div class="stat"><h1>7</h1>Videos</div><div class="stat"><h1>SDG 3</h1>Focus</div></div></section>
+<section id="labs"><h2>Laboratory Exercises</h2><div class="grid">
+<div class="card"><h3>Lab 1 (UI)</h3><p>Android practical exercise covering essential development concepts and implementation.</p><iframe src="https://www.youtube.com/embed/5wlVomSYiRE" title="Lab 1 (UI)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p><strong>Reflection:</strong> This lab strengthened my practical skills and reinforced the importance of writing maintainable code while creating intuitive user experiences. It improved my confidence in applying theory to real projects.</p></div><div class="card"><h3>Lab 2 (Interaction)</h3><p>Android practical exercise covering essential development concepts and implementation.</p><iframe src="https://www.youtube.com/embed/PHVjNfoqniw" title="Lab 2 (Interaction)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p><strong>Reflection:</strong> This lab strengthened my practical skills and reinforced the importance of writing maintainable code while creating intuitive user experiences. It improved my confidence in applying theory to real projects.</p></div><div class="card"><h3>Lab 3 (Material Design)</h3><p>Android practical exercise covering essential development concepts and implementation.</p><iframe src="https://www.youtube.com/embed/Wm2ccnrBJ-k" title="Lab 3 (Material Design)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p><strong>Reflection:</strong> This lab strengthened my practical skills and reinforced the importance of writing maintainable code while creating intuitive user experiences. It improved my confidence in applying theory to real projects.</p></div><div class="card"><h3>Lab 4 (Navigation)</h3><p>Android practical exercise covering essential development concepts and implementation.</p><iframe src="https://www.youtube.com/embed/vmky3yQ8ngk" title="Lab 4 (Navigation)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p><strong>Reflection:</strong> This lab strengthened my practical skills and reinforced the importance of writing maintainable code while creating intuitive user experiences. It improved my confidence in applying theory to real projects.</p></div><div class="card"><h3>Lab 5 (Room)</h3><p>Android practical exercise covering essential development concepts and implementation.</p><iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Lab 5 (Room)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p><strong>Reflection:</strong> This lab strengthened my practical skills and reinforced the importance of writing maintainable code while creating intuitive user experiences. It improved my confidence in applying theory to real projects.</p></div></div></section><section id='projects'><h2>Projects</h2><div class='grid'><div class="card"><h3>Project 1 - Shift & Reset</h3><p><strong>Problem Statement:</strong> Shift &amp; Reset aims to encourage healthier daily habits and better well-being through accessible mobile technology.</p><iframe src="https://www.youtube.com/embed/yeiwcY9tgK0" title="Project 1 - Shift & Reset" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p><strong>Lessons Learned:</strong> Integrating multiple Android components taught me about architecture, debugging, persistence and creating scalable solutions for real users.</p><p><a class="btn" target="_blank" href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project1">View on GitHub</a></p></div><div class="card"><h3>Project 2 - Shift & Reset</h3><p><strong>Problem Statement:</strong> Shift &amp; Reset aims to encourage healthier daily habits and better well-being through accessible mobile technology.</p><iframe src="https://www.youtube.com/embed/ZPNtiUGzRbY" title="Project 2 - Shift & Reset" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p><strong>Lessons Learned:</strong> Integrating multiple Android components taught me about architecture, debugging, persistence and creating scalable solutions for real users.</p><p><a class="btn" target="_blank" href="https://github.com/a209778-deviya/A209778_Deviya_DrNazatul_Project2">View on GitHub</a></p></div></div></section>
+<section id="reflection"><h2>Reflection & Learning Journey</h2>
+<div class="card timeline">
+<div>Started with UI fundamentals and learned the importance of accessibility and usability.</div>
+<div>Implemented interaction patterns and navigation to improve application flow.</div>
+<div>Integrated Room database, APIs and cloud concepts while strengthening debugging skills.</div>
+<div>Completed Shift &amp; Reset with confidence in building complete Android solutions aligned with SDG 3.</div>
 </div></section>
-
-<section id="reflection">
-<h2>Reflection & Learning Journey</h2>
-<p>Throughout these labs and projects I strengthened both technical and problem-solving skills. I progressively learned UI design, navigation, local storage and system integration while applying them to meaningful applications. Every activity contributed to my confidence as a future software engineer.</p>
-</section>
-
-<section id="skills">
-<h2>Skills & Tech Stack</h2>
-<p>Kotlin, Jetpack Compose, Material Design, Room, Firebase Firestore, REST API Integration, Android Sensors, Git, GitHub, Android Studio</p>
-</section>
-
-<section id="resources">
-<h2>Resources</h2>
-<ul>
-<li>Jetpack Compose</li>
-<li>Material Design Components</li>
-<li>Room Database</li>
-<li>Firebase Firestore</li>
-<li>Android Sensor APIs</li>
-<li>REST APIs</li>
-</ul>
-<p><strong>AI Acknowledgement:</strong> ChatGPT was used responsibly for brainstorming, documentation support and coding guidance.</p>
-</section>
-
-<footer>
-<p>DEVIYA A/P SAVUNTI PANDIYAN | A209778 | 2026</p>
-</footer>
-</body>
-</html>
+<section id="skills"><h2>Skills & Tech Stack</h2><div class="card">
+<p>Kotlin</p><div class="bar"><div class="fill" style="width:95%"></div></div>
+<p>Jetpack Compose</p><div class="bar"><div class="fill" style="width:90%"></div></div>
+<p>Room Database</p><div class="bar"><div class="fill" style="width:88%"></div></div>
+<p>Retrofit</p><div class="bar"><div class="fill" style="width:84%"></div></div>
+<p>Firebase Firestore</p><div class="bar"><div class="fill" style="width:86%"></div></div>
+<p>ML Kit & CameraX</p><div class="bar"><div class="fill" style="width:82%"></div></div>
+</div></section>
+<section id="resources"><h2>Resources & Acknowledgement</h2><div class="card"><ul><li>Firebase Firestore</li><li>Room Database</li><li>Retrofit</li><li>ML Kit</li><li>CameraX</li><li>Android Studio</li><li>Git & GitHub</li><li>AI assistance used for brainstorming, writing refinement and design inspiration.</li></ul></div></section>
+<footer>DEVIYA A/P SAVUNTI PANDIYAN • Matric: A209778 • 2026</footer></body></html>
